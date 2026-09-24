@@ -136,10 +136,9 @@ Lives on the site at `index.html`. Summary:
 
 | | rate |
 |---|---|
-| Event transport (I drive) | $225/hr, 2-hour minimum |
+| Weddings & arrivals (I drive) | $200 flat — no hourly, no minimum |
 | Photo & video hour | $150/hr, 1-hour minimum |
 | Prom / graduation send-off | $275 flat, 90 minutes |
-| Wedding day package | $600 for 3 hours (saves $75) |
 | Content half-day | $500 for 4 hours (saves $100) |
 | Self-drive rental | not offered — `[Turo listing / not offering yet]` |
 
