@@ -18,6 +18,7 @@
   --bg:#0B0C0E; --panel:#14161A; --raise:#1B1F25; --line:#262A30;
   --ink:#F4F1EA; --mut:#9AA3AE; --faint:#6B747E;
   --ice:#9CC3E4; --ice-dim:#6E9BBE;
+  --navh:62px;
   --display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;
   --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
@@ -46,22 +47,29 @@ h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:.01em;line-height:.9
 .btn.ghost:hover{border-color:var(--ice-dim)}
 .btn.sm{padding:9px 16px;font-size:12.5px}
 
-/* hero — the photo runs edge to edge and uncropped: width 100%, height auto. The copy sits
-   over its lower third on a wide screen, and drops below it on a phone, where a 16:9 frame is
-   too short to hold type without covering the truck. */
-.hero{position:relative;background:#000;border-bottom:1px solid var(--line)}
-.hero-img{display:block;width:100%;height:auto}
+/* hero — sized to the screen, not to the file. A 16:9 photo at full width is taller than a
+   laptop viewport, which pushed the headline below the fold; the hero is now one screen minus
+   the nav, and the photo covers it (losing a little sky and road, never the truck or the
+   marquee). On a phone the photo takes the top half and the copy sits under it, so the whole
+   thing still lands in one screen. */
+.hero{position:relative;background:#000;border-bottom:1px solid var(--line);
+  height:calc(100vh - var(--navh));
+  height:calc(100svh - var(--navh));
+  min-height:460px;max-height:940px}
+.hero-img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%}
 .hero-copy{position:absolute;left:0;right:0;bottom:0;
-  background:linear-gradient(to top,rgba(11,12,14,.94) 0%,rgba(11,12,14,.72) 38%,rgba(11,12,14,.18) 70%,transparent 100%)}
-.hero-copy .wrap{padding-top:clamp(40px,7vw,90px);padding-bottom:clamp(26px,4vw,52px)}
+  background:linear-gradient(to top,rgba(11,12,14,.94) 0%,rgba(11,12,14,.74) 40%,rgba(11,12,14,.2) 72%,transparent 100%)}
+.hero-copy .wrap{padding-top:clamp(36px,6vw,80px);padding-bottom:clamp(24px,3.5vw,44px)}
 @media(max-width:760px){
+  .hero{height:auto;min-height:0;max-height:none}
+  .hero-img{height:44vh;height:44svh}
   .hero-copy{position:static;background:var(--bg)}
-  .hero-copy .wrap{padding-top:30px;padding-bottom:34px}
+  .hero-copy .wrap{padding-top:26px;padding-bottom:30px}
 }
-.hero h1{font-size:clamp(46px,8.5vw,112px);font-weight:800;text-transform:uppercase}
+.hero h1{font-size:clamp(44px,7vw,96px);font-weight:800;text-transform:uppercase}
 .hero h1 em{font-style:normal;color:var(--ice);display:block}
-.hero p.lede{font-size:clamp(15px,1.7vw,19px);color:var(--mut);max-width:38ch;margin:18px 0 0}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero p.lede{font-size:clamp(15px,1.5vw,18px);color:var(--mut);max-width:42ch;margin:14px 0 0}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .strip{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   background:var(--panel)}
 .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:14px;padding-bottom:14px}
