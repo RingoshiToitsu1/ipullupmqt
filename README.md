@@ -17,7 +17,8 @@ Placeholders to fill, all in `index.html`:
   deliberately makes no claim about coverage or licensing, and should not until
   it is confirmed in writing
 - the G63's colour, if you want it named in the copy
-- `images/hero.jpg` — drop a wide shot of the truck in and the hero uses it
-  automatically. Until then the gradient stands in and nothing looks broken.
+The hero photo is `images/hero.jpg`, shown edge to edge and uncropped at the top
+of the page. Replace that file to change it — keep it wide (16:9 works best) and
+dark enough that white type reads over its lower third.
 
 Published with GitHub Pages from `main`.
