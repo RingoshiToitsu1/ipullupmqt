@@ -47,29 +47,28 @@ h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:.01em;line-height:.9
 .btn.ghost:hover{border-color:var(--ice-dim)}
 .btn.sm{padding:9px 16px;font-size:12.5px}
 
-/* hero — sized to the screen, not to the file. A 16:9 photo at full width is taller than a
-   laptop viewport, which pushed the headline below the fold; the hero is now one screen minus
-   the nav, and the photo covers it (losing a little sky and road, never the truck or the
-   marquee). On a phone the photo takes the top half and the copy sits under it, so the whole
-   thing still lands in one screen. */
+/* hero — one screen, split. The copy is a band of its own beneath the photo, and the photo
+   takes whatever height is left (flex:1, min-height:0). Nothing is pinned to the bottom edge
+   of a viewport-height box and nothing is overlaid, so the headline cannot be pushed off the
+   fold by a tall photo, a short laptop screen, browser chrome or zoom — the copy claims its
+   height first and the image gets the remainder. */
 .hero{position:relative;background:#000;border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;
   height:calc(100vh - var(--navh));
   height:calc(100svh - var(--navh));
-  min-height:460px;max-height:940px}
-.hero-img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%}
-.hero-copy{position:absolute;left:0;right:0;bottom:0;
-  background:linear-gradient(to top,rgba(11,12,14,.94) 0%,rgba(11,12,14,.74) 40%,rgba(11,12,14,.2) 72%,transparent 100%)}
-.hero-copy .wrap{padding-top:clamp(36px,6vw,80px);padding-bottom:clamp(24px,3.5vw,44px)}
+  min-height:420px}
+.hero-img{display:block;width:100%;flex:1 1 auto;min-height:0;object-fit:cover;object-position:center 46%}
+.hero-copy{flex:0 0 auto;background:var(--bg);border-top:1px solid var(--line)}
+.hero-copy .wrap{padding-top:clamp(20px,2.6vw,34px);padding-bottom:clamp(22px,2.8vw,36px)}
 @media(max-width:760px){
-  .hero{height:auto;min-height:0;max-height:none}
-  .hero-img{height:44vh;height:44svh}
-  .hero-copy{position:static;background:var(--bg)}
-  .hero-copy .wrap{padding-top:26px;padding-bottom:30px}
+  .hero{height:auto;min-height:0}
+  .hero-img{flex:0 0 auto;height:42vh;height:42svh}
+  .hero-copy .wrap{padding-top:22px;padding-bottom:28px}
 }
-.hero h1{font-size:clamp(44px,7vw,96px);font-weight:800;text-transform:uppercase}
-.hero h1 em{font-style:normal;color:var(--ice);display:block}
-.hero p.lede{font-size:clamp(15px,1.5vw,18px);color:var(--mut);max-width:42ch;margin:14px 0 0}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero h1{font-size:clamp(40px,5.2vw,72px);font-weight:800;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--ice)}
+.hero p.lede{font-size:clamp(14.5px,1.3vw,17px);color:var(--mut);max-width:56ch;margin:10px 0 0}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .strip{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   background:var(--panel)}
 .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:14px;padding-bottom:14px}
