@@ -75,7 +75,7 @@ DM a date — I'll tell you if it's open
 **Photo & video**
 
 > Same senior session, same photographer, one different parking spot.
-> An hour with the truck is $150 and I'll put it wherever your light is.
+> A session with the truck is $100 flat and I'll put it wherever your light is.
 > `#seniorphotos #nmu #marquettemi #michiganphotographer #uppermichigan
 > #seniorpics #photoshootideas #g63 #blackrocks`
 
@@ -137,9 +137,9 @@ Lives on the site at `index.html`. Summary:
 | | rate |
 |---|---|
 | Weddings & arrivals (I drive) | $200 flat — no hourly, no minimum |
-| Photo & video hour | $150/hr, 1-hour minimum |
+| Photo & video session | $100 flat, per session |
 | Prom / graduation send-off | $275 flat, 90 minutes |
-| Content half-day | $500 for 4 hours (saves $100) |
+| Content day | $500, full day, multiple locations |
 | Self-drive rental | not offered — `[Turo listing / not offering yet]` |
 
 Travel beyond Marquette quoted before booking. $100 deposit holds any date.
