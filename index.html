@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ipullupmqt — G63 Arrivals, Shoots &amp; Send-Offs | Marquette, MI</title>
+<meta name="description" content="A Mercedes-AMG G63 for weddings, prom send-offs, photo and video shoots, and brand content in Marquette and across the Upper Peninsula.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ipullupmqt — Marquette, MI">
+<meta property="og:description" content="The G63 pulls up. Weddings, send-offs, shoots and content across the U.P.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#0B0C0E; --panel:#14161A; --raise:#1B1F25; --line:#262A30;
+  --ink:#F4F1EA; --mut:#9AA3AE; --faint:#6B747E;
+  --ice:#9CC3E4; --ice-dim:#6E9BBE;
+  --display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:.01em;line-height:.95;text-wrap:balance}
+.eyebrow{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ice)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,12,14,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;padding-top:14px;padding-bottom:14px}
+.mark{font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:.02em;margin-right:auto}
+.mark span{color:var(--ice)}
+.nav a.link{font-size:14px;font-weight:600;color:var(--mut);text-decoration:none}
+.nav a.link:hover{color:var(--ink)}
+@media(max-width:700px){.nav a.link{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ice);color:#0A1218;
+  border:none;border-radius:2px;padding:12px 22px;font-family:var(--body);font-size:14px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ice-dim)}
+.btn.sm{padding:9px 16px;font-size:12.5px}
+
+/* hero — works with or without images/hero.jpg; the gradient is the fallback, not a gap */
+.hero{position:relative;border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,.82) 55%,var(--bg) 100%),
+    radial-gradient(ellipse 80% 60% at 70% 10%,rgba(156,195,228,.14),transparent 60%),
+    url('images/hero.jpg') center 40%/cover no-repeat,
+    linear-gradient(140deg,#15181D 0%,#0B0C0E 60%);
+}
+.hero .wrap{padding-top:clamp(70px,13vw,140px);padding-bottom:clamp(50px,9vw,96px)}
+.hero h1{font-size:clamp(52px,12vw,132px);font-weight:800;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--ice);display:block}
+.hero p.lede{font-size:clamp(16px,2vw,20px);color:var(--mut);max-width:38ch;margin:22px 0 0}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.strip{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--panel)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:14px;padding-bottom:14px}
+.strip span{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.strip span b{color:var(--ice);font-weight:600}
+
+/* sections */
+section{padding-block:clamp(56px,8vw,96px)}
+.head{max-width:60ch;margin-bottom:40px;display:flex;flex-direction:column;gap:12px}
+.head h2{font-size:clamp(34px,6vw,64px);font-weight:700;text-transform:uppercase}
+.head p{margin:0;color:var(--mut)}
+
+.svcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:760px){.svcs{grid-template-columns:1fr}}
+.svc{background:var(--bg);padding:30px 26px;display:flex;flex-direction:column;gap:12px}
+.svc .n{font-family:var(--display);font-size:15px;font-weight:700;color:var(--ice);letter-spacing:.1em}
+.svc h3{font-size:30px;font-weight:700;text-transform:uppercase}
+.svc p{margin:0;color:var(--mut);font-size:15px}
+.svc ul{margin:4px 0 0;padding-left:18px;color:var(--mut);font-size:14.5px;display:flex;flex-direction:column;gap:4px}
+.svc .price{margin-top:auto;padding-top:14px;font-family:var(--display);font-size:22px;font-weight:700;color:var(--ink)}
+.svc .price small{font-family:var(--body);font-size:13px;font-weight:500;color:var(--faint);text-transform:none;letter-spacing:0}
+
+/* menu */
+.menu{border:1px solid var(--line);background:var(--panel)}
+.row{display:flex;gap:20px;align-items:flex-start;padding:22px 26px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .info{flex:1;min-width:0}
+.row h3{font-size:24px;font-weight:700;text-transform:uppercase;margin-bottom:4px}
+.row p{margin:0;color:var(--mut);font-size:14.5px}
+.row .amt{font-family:var(--display);font-size:30px;font-weight:700;white-space:nowrap;color:var(--ice)}
+.row .amt small{display:block;font-family:var(--body);font-size:12px;font-weight:500;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;text-align:right}
+@media(max-width:620px){.row{flex-direction:column;gap:8px}.row .amt{font-size:26px}.row .amt small{text-align:left}}
+.note{margin-top:16px;color:var(--faint);font-size:13px;line-height:1.7}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px}
+@media(max-width:760px){.faq{grid-template-columns:1fr}}
+.faq h3{font-family:var(--body);font-size:16px;font-weight:700;margin-bottom:6px}
+.faq p{margin:0;color:var(--mut);font-size:15px}
+
+/* book */
+.book{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:760px){.book .inner{grid-template-columns:1fr;gap:28px}}
+.book h2{font-size:clamp(34px,6vw,58px);font-weight:700;text-transform:uppercase}
+.book p{color:var(--mut);margin:14px 0 0}
+.contact{display:flex;flex-direction:column;gap:10px}
+.contact a{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--bg);
+  border:1px solid var(--line);padding:16px 20px;text-decoration:none;transition:border-color .15s}
+.contact a:hover{border-color:var(--ice-dim)}
+.contact .k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.contact .v{font-family:var(--display);font-size:22px;font-weight:700}
+
+footer{padding-block:34px;color:var(--faint);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="mark">ipullup<span>mqt</span></div>
+    <a class="link" href="#services">Services</a>
+    <a class="link" href="#menu">Pricing</a>
+    <a class="link" href="#faq">FAQ</a>
+    <a class="btn sm" href="#book">Check a date</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Marquette &middot; Upper Peninsula</div>
+    <h1>The G63<em>pulls up.</em></h1>
+    <p class="lede">A Mercedes-AMG G63 for the arrival, the send-off, and the shot you actually want. Weddings, prom, senior photos, brand content &mdash; anywhere in the U.P. worth driving to.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Check a date</a>
+      <a class="btn ghost" href="#menu">See pricing</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <span><b>AMG G63</b> &middot; blacked out</span>
+    <span>I drive &mdash; you enjoy it</span>
+    <span>Marquette &amp; the U.P.</span>
+    <span><b>Winter-ready</b> &middot; it's a G-Wagon</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What it's for</div>
+      <h2>Four ways to put it to work</h2>
+      <p>Every booking is me and the truck. I show up early, I keep it clean, and I stay out of your photos unless you want me in them.</p>
+    </div>
+
+    <div class="svcs">
+      <article class="svc">
+        <div class="n">01</div>
+        <h3>Weddings &amp; arrivals</h3>
+        <p>The getaway car that doesn't look like every other getaway car. I drive, you ride.</p>
+        <ul>
+          <li>Bride and groom arrival, ceremony to reception</li>
+          <li>Getaway exit with the doors and the noise</li>
+          <li>Executive and VIP arrivals for events in town</li>
+        </ul>
+        <div class="price">$225/hr<br><small>2-hour minimum &middot; travel beyond Marquette quoted</small></div>
+      </article>
+
+      <article class="svc">
+        <div class="n">02</div>
+        <h3>Photo &amp; video</h3>
+        <p>An hour of the G63 as your backdrop, parked wherever the light is good.</p>
+        <ul>
+          <li>Senior photos, engagement sessions, prom shoots</li>
+          <li>Music video and content days</li>
+          <li>Real estate and small business promos</li>
+        </ul>
+        <div class="price">$150/hr<br><small>1-hour minimum &middot; I'm on site the whole time</small></div>
+      </article>
+
+      <article class="svc">
+        <div class="n">03</div>
+        <h3>Send-offs</h3>
+        <p>Prom and graduation, done properly. Pull up at the house, get the photos, make the entrance.</p>
+        <ul>
+          <li>Prom pickup, photos, drop at the venue</li>
+          <li>Graduation and signing-day arrivals</li>
+          <li>Birthday pull-ups</li>
+        </ul>
+        <div class="price">$275 flat<br><small>90-minute prom package &middot; see pricing below</small></div>
+      </article>
+
+      <article class="svc">
+        <div class="n">04</div>
+        <h3>Brand partnerships</h3>
+        <p>Content with local places worth showing off &mdash; restaurants, breweries, outfitters, venues.</p>
+        <ul>
+          <li>Shoot on location, posted to both our accounts</li>
+          <li>Seasonal collabs: color season, first snow, Superior in July</li>
+          <li>Trade, flat rate, or revenue share &mdash; ask me</li>
+        </ul>
+        <div class="price">Let's talk<br><small>Trade considered for the right fit</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    <div class="head" style="margin-bottom:0">
+      <div class="eyebrow">About</div>
+      <h2>Built for the U.P.</h2>
+    </div>
+    <div>
+      <p style="margin:0;color:var(--mut)">ipullupmqt is a Mercedes-AMG G63 and the guy who drives it, working out of Marquette and up and down the Upper Peninsula. It started the way most good ideas here do &mdash; people kept asking to take pictures with the truck, so I started saying yes on purpose.</p>
+      <p style="color:var(--mut)">Now it shows up for weddings at the venues out by the lake, prom send-offs on the front lawn, senior sessions at Presque Isle and the Black Rocks, and content days with local spots that deserve a better backdrop than a parking lot. It handles the Marquette winter the way a G-Wagon should, so December bookings are as real as July ones.</p>
+      <p style="color:var(--mut);margin-bottom:0">One truck, one driver, one thing done well: making the moment you already planned feel like an event. Bring the date, I'll bring the arrival.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Pricing</div>
+      <h2>Rates &amp; packages</h2>
+      <p>Straight numbers, no bidding. Marquette and the immediate area are included; anything past that gets a travel quote before you commit.</p>
+    </div>
+
+    <div class="menu">
+      <div class="row">
+        <div class="info">
+          <h3>Event transport</h3>
+          <p>Weddings, VIP arrivals, anything where you need to be driven. Hourly, from the time I arrive to the time you're done.</p>
+        </div>
+        <div class="amt">$225<small>per hour &middot; 2 hr min</small></div>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Photo &amp; video hour</h3>
+          <p>The truck as a backdrop, positioned where you want it, for as long as you booked. I stay with the vehicle.</p>
+        </div>
+        <div class="amt">$150<small>per hour &middot; 1 hr min</small></div>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Prom / graduation send-off</h3>
+          <p>90 minutes: pickup at the house, photos with your group, drop-off at the venue. The whole point of the night before the night.</p>
+        </div>
+        <div class="amt">$275<small>flat package</small></div>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Wedding day package</h3>
+          <p>Three hours across the day &mdash; arrival, portraits with the truck, and the getaway. Most-booked option from June to October.</p>
+        </div>
+        <div class="amt">$600<small>3 hours &middot; saves $75</small></div>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Content half-day</h3>
+          <p>Four hours for a shoot day: multiple locations around Marquette, as many setups as you can fit. Built for photographers and brands.</p>
+        </div>
+        <div class="amt">$500<small>4 hours &middot; saves $100</small></div>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Self-drive rental</h3>
+          <p>Not offered yet. If you want the keys rather than the ride, get on the list and you'll hear first. <em>[Turo listing / not offering yet]</em></p>
+        </div>
+        <div class="amt">Soon<small>join the list</small></div>
+      </div>
+    </div>
+    <p class="note">
+      Rates are for Marquette and the surrounding area; Negaunee, Ishpeming, Harvey and Big Bay are usually a small travel add-on, and anything further out gets quoted first.
+      Summer and fall weekends book earliest &mdash; wedding dates from June through October are often claimed months ahead, and prom weekend goes fast in May.
+      Winter dates are open and the truck is built for them. <em>[confirm insurance/licensing before publishing final rates]</em>
+    </p>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Details</div>
+      <h2>Before you book</h2>
+    </div>
+    <div class="faq">
+      <div>
+        <h3>How do I book a date?</h3>
+        <p>Message me with the date, the times, and where it starts and ends. I'll confirm whether it's open and send the total. Dates hold once the deposit is in, not before.</p>
+      </div>
+      <div>
+        <h3>What's the deposit?</h3>
+        <p>$100 holds any date, applied to your total. The balance is due the day of, before we roll. Wedding packages booked more than 90 days out can split the balance.</p>
+      </div>
+      <div>
+        <h3>What if I need to cancel?</h3>
+        <p>Cancel more than 14 days out and the deposit moves to another date within the year. Inside 14 days it's kept, since that date is usually turning away other bookings by then.</p>
+      </div>
+      <div>
+        <h3>What about weather?</h3>
+        <p>It's a G-Wagon in the U.P. &mdash; snow and rain are not cancellations. If conditions are genuinely unsafe, we reschedule and nothing is lost.</p>
+      </div>
+      <div>
+        <h3>Who drives?</h3>
+        <p>I do, on every booking. Self-drive rental isn't offered right now. On photo and video sessions I'm on site with the vehicle the whole time.</p>
+      </div>
+      <div>
+        <h3>Insurance and licensing?</h3>
+        <p><em>[confirm insurance/licensing &mdash; do not publish specifics until verified with your agent and the State of Michigan]</em></p>
+      </div>
+      <div>
+        <h3>Can we bring drinks or food?</h3>
+        <p>Sealed drinks are fine. No open containers, no smoking, no glitter or confetti inside. Anything that stains gets a cleaning charge, which I'd rather never mention again.</p>
+      </div>
+      <div>
+        <h3>How far will you travel?</h3>
+        <p>Anywhere in the U.P. worth the drive. Outside the Marquette area there's a travel rate, quoted up front so the number you see is the number you pay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap inner">
+    <div>
+      <h2>Bring the date.<br>I'll bring the arrival.</h2>
+      <p>Summer and fall weekends go first, and prom weekend books out in weeks. If you have a date in mind, ask now &mdash; it costs nothing to find out it's open.</p>
+    </div>
+    <div class="contact">
+      <a href="sms:+1[PHONE]">
+        <span class="k">Call or text</span>
+        <span class="v">[PHONE]</span>
+      </a>
+      <a href="https://instagram.com/ipullupmqt" target="_blank" rel="noopener">
+        <span class="k">Instagram</span>
+        <span class="v">@ipullupmqt</span>
+      </a>
+      <a href="mailto:[EMAIL]">
+        <span class="k">Email</span>
+        <span class="v">[EMAIL]</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark" style="font-size:20px;margin:0">ipullup<span>mqt</span></div>
+    <div>Mercedes-AMG G63 &middot; Marquette, Michigan &amp; the Upper Peninsula</div>
+  </div>
+</footer>
+
+</body>
+</html>
