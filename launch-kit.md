@@ -82,7 +82,7 @@ DM a date — I'll tell you if it's open
 **Prom / graduation send-offs**
 
 > Prom photos on the front lawn, then doors up and gone.
-> 90 minutes, $275, your whole group in the shot. May books out in weeks —
+> $200 flat, your whole group in the shot. May books out in weeks —
 > get the date now, thank yourself in the spring.
 > `#promnight #marquettemi #mshs #promsendoff #classof2027 #uppermichigan
 > #promproposal #g63`
@@ -138,7 +138,7 @@ Lives on the site at `index.html`. Summary:
 |---|---|
 | Weddings & arrivals (I drive) | $200 flat — no hourly, no minimum |
 | Photo & video session | $100 flat, per session |
-| Prom / graduation send-off | $275 flat, 90 minutes |
+| Prom / graduation send-off | $200 flat |
 | Content day | $500, full day, multiple locations |
 | Self-drive rental | not offered — `[Turo listing / not offering yet]` |
 
